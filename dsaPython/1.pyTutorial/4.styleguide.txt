@@ -1,0 +1,55 @@
+PEP 8 python styleguideline
+
+-------------------------------------------------
+# indentation
+-------------------------------------------------
+
+line up multiple line long parameters & conditions
+
+-------------------------------------------------
+
+def discriptiveFunction(parameter one, parameter two
+                        parameter three, parameter four):
+
+--------------------------------------------------
+
+list = [
+     1, 2, 3, 4,
+     5, 6, 7, 8,
+]
+
+---------------------------------------------------
+# blank lines
+---------------------------------------------------
+
+double blanks for top level functions and classes
+single blanks for methods and function operation blocks
+
+---------------------------------------------------
+# quotes
+---------------------------------------------------
+
+single or double fine
+
+---------------------------------------------------
+# whitespace
+---------------------------------------------------
+
+avoid extraneous whitespace
+
+---------------------------------------------------
+
+# correct
+
+def function(x, y, z)
+list = [1]
+list = [1, 2, 3, 4, ...]
+
+---------------------------------------------------
+# naming convensions
+---------------------------------------------------
+
+for modules:                short lowercase names
+for classes:                CapWords
+for functions & variables:  words_with_underscores or mixedCase
+for constants:              ALL_CAPS

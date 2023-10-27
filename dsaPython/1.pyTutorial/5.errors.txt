@@ -1,0 +1,8 @@
+Collection of errors
+----------------------------------------------------------
+
+TypeError: 'builtin_function_or_method' object is not subscriptable
+
+-> syntax error using built in function (eg. list.append[] instead of list.append() )
+
+----------------------------------------------------------

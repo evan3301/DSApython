@@ -1,0 +1,136 @@
+Classes create a new type of object
+    This new type can be referenced in new instances
+        These instances can contain new methods for changing or defining its state
+
+-------------------------------------------------------
+# classes
+-------------------------------------------------------
+
+class MyDog:                         # create class via 'class' keyword
+
+-----------------------------------------------------------------
+# class instance attributes
+-----------------------------------------------------------------
+
+attributes describe what an object is / has
+
+-----------------------------------------------------------------
+
+class MyDog:
+
+    breed = 'labradoodle'
+    color = 'yellow'
+
+----------------------------------------------------------------
+# class methods
+----------------------------------------------------------------
+
+methods are functions defined within classes , describes what an object does
+
+----------------------------------------------------------------
+
+class MyDog:
+
+    def __init__(self, breed, color):         # __init__ method constructs objects (constructor)
+        self.breed = breed
+        self.color = color
+
+    def bark(self):                           # self refers to current object
+        print('woof')
+
+---------------------------------------------------------------
+# creating objects
+---------------------------------------------------------------
+
+to create an object of a class
+    call class by name and parameters (can pass arguments to __init__)
+
+---------------------------------------------------------------
+
+dog1 = MyDog('Labradoodle', 'Yello')
+
+print(dog1.breed)
+print(dog1.color)
+
+dog1.bark()
+
+>>> Labradoodle
+>>> Yellow
+
+>>> woof
+
+---------------------------------------------------------------
+# reusing classes
+---------------------------------------------------------------
+
+dog1 = MyDog('Labradoodle', 'Yello')
+dog2 = MyDog('Basset Hound', 'Brown')
+
+print(dog2.breed)
+print(dog2.color)
+
+dog2.bark()
+
+>>> Basset Hound
+>>> Brown
+
+>>> woof
+
+---------------------------------------------------------------
+# class instances
+---------------------------------------------------------------
+
+class MyDog:
+
+    legs = 4                                  # class variable (global, unchangable*)
+
+    def __init__(self, breed, color):         # instance variable (local, changable)
+        self.breed = breed
+        self.color = color
+
+
+dog1 = MyDog('Labradoodle', 'Yello')         # instance variable changed
+dog2 = MyDog('Basset Hound', 'Brown')        # instance varuable changed
+
+dog1.legs = 3
+
+print(dog1.legs)                              # dog1 class variable 'legs' manually changed
+print(dog2.legs)                              # dog2 class varuable 'legs' still default value 4
+
+>>> 3
+>>> 4
+
+--------------------------------------------------------------
+# class inheritence
+--------------------------------------------------------------
+
+class Animal
+
+    alive = True
+
+    def eat(self):
+        print('This animal is eating')
+
+    def sleep(self):
+        print('This animal is sleeping')
+
+class Rabbit(Animal):                          # Rabbit is child class of parent class Animal
+    pass                                       # inherits all attributes of Animal
+
+class Fish(Animal):
+    pass
+
+class Dog(Animal):
+    pass
+
+rabbit = Rabbit()
+fish = Fish()
+dog = Dog()
+
+rabbit.eat
+fish.sleep
+print(dog.alive)
+
+>>> This animal is eating
+>>> This animal is sleeping
+>>> True

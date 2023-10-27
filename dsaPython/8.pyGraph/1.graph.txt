@@ -1,0 +1,163 @@
+Graph
+    Non-linear data structure
+        vertices(nodes) and edges(connecting lines)
+
+Tree vs. Graph
+    All trees are graphs but not all graphs are trees
+
+        Trees
+        Linked Lists
+        Heaps
+
+        ^ All graphs
+
+Vertices(V) and Edges(E)
+  G(V, E)
+
+----------------------------------------------------------
+# Composition of a graph
+----------------------------------------------------------
+
+            1           -> Vertices (Nodes)
+          /   \
+         2     3
+          \   /         -> Edges (Connecting lines)
+            4
+
+-----------------------------------------------------------
+# Types of graphs
+-----------------------------------------------------------
+
+Null Graph          # Graph without edges
+Trivial Graph       # Graph with only one node (smallest graph possible)
+
+------------------------------------------------------------
+Undirected graph    # Graph where edges have no direction
+------------------------------------------------------------
+
+
+            1
+          /   \
+         2     3
+          \   /
+            4
+
+-------------------------------------------------------------
+Directed graph      # Graph where edges have direction
+-------------------------------------------------------------
+
+        1
+      ^   ^
+     /     \
+    2       3
+    ^       ^
+     \     /
+        4
+
+---------------------------------------------------------------
+Connected graph     # Graph where all nodes are connected
+---------------------------------------------------------------
+
+            1
+          /   \
+         2     3
+          \   /
+            4
+
+----------------------------------------------------------------
+Disconnected graph  # Graph where not all nodes are connected
+----------------------------------------------------------------
+
+            1
+          /
+         2     3
+             /
+            4
+
+----------------------------------------------------------------
+Regular graph       # Graph where k degree for every vertex
+----------------------------------------------------------------
+
+            1
+          /   \
+         2     3        -> 2-Regular graph (2 degree per node)
+          \   /
+            4
+
+----------------------------------------------------------------
+Complete graph      # Graph where all nodes are connected via an edge
+----------------------------------------------------------------
+
+            1
+          / | \
+         2 --- 3
+          \ | /
+            4
+
+----------------------------------------------------------------
+Cycle graph        # 2-Regular graph where whole graph is a cycle
+----------------------------------------------------------------
+
+            1
+          /   \
+         2     3
+          \   /
+            4
+
+-----------------------------------------------------------------
+Cyclic graph       # Graph containing at least one cycle
+-----------------------------------------------------------------
+
+            1
+          / | \
+         2  |  3
+            | /
+            4
+
+-----------------------------------------------------------------
+Weighted graph     # Graph where edges are assigned a weight (value)
+-----------------------------------------------------------------
+
+Ways of representing graphs
+    Adjacency Matrix
+    Adjacency List
+
+------------------------------------------------------------------
+Adjacency Matrix
+
+    2D matrix
+        rows and columns are vertices
+        each entry is weight of edge between vertices
+            (in this case the distance between nodes)
+
+------------------------------------------------------------------
+
+                             0  1  2  3
+            0 - 1            ----------
+            | /          0 | 0  1  1  0
+            2 - 3        1 | 1  0  1  0
+                         2 | 1  1  0  1
+                         3 | 0  0  1  0
+
+-----------------------------------------------------------------
+Adjacency List
+
+    Collection of linked lists
+        Pointers that point to edges connected to vertex
+
+-----------------------------------------------------------------
+
+
+            0 - 1       0-> 1-> 2
+            | /         1-> 0-> 2
+            2 - 3       2-> 0-> 1-> 3
+                        3-> 2
+
+------------------------------------------------------------------
+# Basic operations on graphs
+------------------------------------------------------------------
+
+Insertion of nodes/edges
+Deletion of nodes/edges
+Search
+Traversal
